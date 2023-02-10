@@ -1,6 +1,6 @@
 const mongoose = require("mongoose"); //mongoose 모듈을 사용
 
-const postsSchema = new mongoose.Schema({ //new객체를 이용하여 Schema를 지정 (구현하고자 하는 것의 기본 틀 작성)
+const postsSchema = new mongoose.Schema({ //mongoose의 Schema를 새롭게 지정 한다는 뜻
   user: {
     type: String,
     required: true,
@@ -23,4 +23,5 @@ const postsSchema = new mongoose.Schema({ //new객체를 이용하여 Schema를 
   }
 });
 
-module.exports = mongoose.model("Posts", postsSchema);
+module.exports = mongoose.model("Posts", postsSchema); 
+//mongoose 의 model을 posts 로 정의를 할 것이고, 그 값은 postsSchema에서 가져와서 module.exports로 내보내준다.
